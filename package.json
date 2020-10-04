@@ -4,6 +4,7 @@
   "description": "petgram",
   "main": "index.js",
   "scripts": {
+    "versel-build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack mode -production",
     "lint": "standard",
@@ -37,7 +38,9 @@
   },
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.11.0",
+    "styled-components": "^5.2.0"
   },
   "standard": {
     "ignore": [
