@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { fadeIn } from '../styles/animations'
+import { skeletonStyle } from '../styles/Skeletron'
 
 export const ImgWrapper = styled.div`
   border-radius: 10px;
@@ -11,6 +12,9 @@ export const ImgWrapper = styled.div`
   width: 100%;
 `
 export const Img = styled.img`
+  ${(props) => css`
+    ${skeletonStyle(props.light)}
+  `}
   ${fadeIn({ time: '3s' })};
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
   height: 100%;
@@ -26,4 +30,7 @@ export const Button = styled.button`
   & svg {
       margin-right: 4px;
   }
+`
+export const Article = styled.article`
+  min-height: 200px
 `
