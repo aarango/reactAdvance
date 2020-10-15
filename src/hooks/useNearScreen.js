@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 // Esta función captura los elementos en el ViewPort para a medida que se haga scron haga fecht en los emenentos que debe mostrar
 export function useNearScreen () {
   const [show, setShow] = useState(false)
-  const element = useRef(null) // permite camtpurar un elemento del DOM
+  const element = useRef(null) // permite capturar un elemento del DOM
 
   useEffect(function () {
     const observer = new

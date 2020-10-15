@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
 import { skeletonStyle } from '../styles/Skeletron'
+import { Link as LinkRouter } from '@reach/router'
 
-export const Anchor = styled.a`
+export const Link = styled(LinkRouter)`
   display: flex;
   flex-direction: column;
   text-align: center;

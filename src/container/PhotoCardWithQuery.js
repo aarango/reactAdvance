@@ -5,7 +5,7 @@ import { useQuery } from '@apollo/react-hooks'
 
 // Render props
 
-const query = gql`
+const GET_SINGLE_PHOTO = gql`
 query getSinglePhoto($id:ID!) {
     photo(id:$id) {
         id
@@ -19,22 +19,24 @@ query getSinglePhoto($id:ID!) {
 `
 
 export const PhotoCardWithQuery = ({ id = {} }) => {
-  const { loading, error, data } = useQuery(query,
+  const { loading, error, data } = useQuery(GET_SINGLE_PHOTO,
     {
       variables: { id: id }
     }
   )
-  console.log('datQuery', data)
+
   if (loading) return <h1>....Cargando</h1>
   if (error) {
     return <div>Error! {error.message}</div>
   };
 
-  console.log(data.photo.src)
-
   return (
     <>
-      <PhotoCard src={data.photo.src} />
+      <PhotoCard
+        {...data}
+        likes={data.photo.likes}
+        src={data.photo.src}
+      />
     </>
   )
 }

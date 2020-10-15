@@ -1,7 +1,7 @@
 // high order component
 import { gql } from 'apollo-boost'
 
-export const withPhotos = gql`
+export const GET_PHOTOS = gql`
   query GetPhotos($categoryId: ID) {
     photos(categoryId: $categoryId) {
       id
