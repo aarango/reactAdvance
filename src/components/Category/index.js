@@ -11,7 +11,6 @@ export const Category = ({ cover = DEFAULT_IMAGE, path = '/#', emoji = '?' }) =>
 )
 
 export const CategorySkeleton = props => {
-  //console.log(props)
   return (
     <ContainerCategorySkeleton>
       <CategoryImage light={props.light} />

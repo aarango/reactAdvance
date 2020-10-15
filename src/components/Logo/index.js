@@ -4,7 +4,7 @@ import { Link } from '@reach/router'
 
 export const Logo = (props) => {
   return (
-    <Link to='/1'>
+    <Link to='/'>
       <Svg
         width={379.04}
         height={120.81}

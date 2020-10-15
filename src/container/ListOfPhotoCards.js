@@ -3,8 +3,8 @@ import { useQuery } from '@apollo/react-hooks'
 import { GET_PHOTOS } from '../hoc/withPhotos'
 import { ListOfPhotoCardComponent } from '../components/ListOfPhotoCard'
 
-export const ListOfPhotoCard = ({ categoryId = {} }) => {
-  console.log('cate', categoryId)
+export const ListOfPhotoCard = ({ categoryId = 1 }) => {
+  //console.log('cate', categoryId)
   const { loading, error, data } = useQuery(GET_PHOTOS,
     {
       variables: { categoryId: categoryId }
